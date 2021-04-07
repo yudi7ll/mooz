@@ -1,0 +1,17 @@
+version: '3'
+
+networks:
+  mooz:
+
+services:
+  app:
+    image: node:alpine
+    container_name: mooz
+    ports: 
+      - "80:3000"
+    volumes: 
+      - ./:/app
+    working_dir: /app
+    command: "npm start"
+    networks: 
+      - mooz
