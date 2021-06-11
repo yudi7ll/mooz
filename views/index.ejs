@@ -1,26 +1,11 @@
-<%- include('components/header') -%>
-
-<div class="container">
-  <div class="row my-5">
-    <h1 class="text-center">MOOZ</h1>
-  </div>
-  <form class="row" action="/join" method="POST">
-    <div class="form-group mb-3 px-0 col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4">
-      <input
-          type="text"
-          class="form-control"
-          name="username"
-          placeholder="Your name"
-          required
-          />
-    </div>
-    <button
-        type="submit"
-        class="btn btn-primary col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4"
-        >
-        Start Video Chat
-    </button>
-  </form>
-</div>
-
-<%- include('components/footer') -%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1 class="text-center"><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
