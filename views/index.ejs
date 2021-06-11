@@ -1,38 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>MOOZ</title>
-    <link
-      rel="stylesheet"
-      href="bower_components/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="css/app.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row justify-content-center my-5">
-        <h1>MOOZ</h1>
-      </div>
-      <form class="row" action="/join-room" method="POST">
-        <input
+<%- include('components/header') -%>
+
+<div class="container">
+  <div class="row my-5">
+    <h1 class="text-center">MOOZ</h1>
+  </div>
+  <form class="row" action="/join" method="POST">
+    <div class="form-group mb-3 px-0 col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4">
+      <input
           type="text"
-          class="form-control mb-3 col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4"
+          class="form-control"
+          name="username"
           placeholder="Your name"
           required
-        />
-        <button
-          type="submit"
-          class="btn btn-primary col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4"
-        >
-          Start Video Chat
-        </button>
-      </form>
+          />
     </div>
+    <button
+        type="submit"
+        class="btn btn-primary col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4"
+        >
+        Start Video Chat
+    </button>
+  </form>
+</div>
 
-    <!-- Bootstrap script -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<%- include('components/footer') -%>
